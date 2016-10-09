@@ -1,0 +1,25 @@
+{
+	"name": "verbi/yii2-extended-module",
+	"description": "Yii2 Extended Module.",
+	"keywords": ["yii2", "extension", "module"],
+	"type": "yii2-extension",
+	"license": "GPLv3",
+	"authors": [
+		{
+			"name": "Philip Verbist",
+			"email": "philip.verbist@gmail.com"
+		}
+	],
+	"support": {
+		"source": "https://github.com/verbi/yii2-extended-module"
+	},
+	"autoload": {
+		"psr-4": {
+			"verbi\\yii2ExtendedModule\\": "src/"
+		}
+	},
+        "scripts": {
+            "post-install-cmd": "ivanovyordan\\migration\\Migration::migrate",
+            "post-update-cmd": "ivanovyordan\\migration\\Migration::migrate"
+        }
+}
